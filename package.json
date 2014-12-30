@@ -4,7 +4,7 @@
   "description": "Lost Type’s custom, light-weight build of DOMtastic.",
   "homepage": "http://opensource.losttype.com",
   "repository": "https://github.com/losttype/dominiscule.git",
-  "main": "src/index.js",
+  "main": "dist/commonjs",
   "license": "MIT",
   "author": "Kenneth Ormandy <hello@kennethormandy.com>",
   "contributors": [
@@ -17,15 +17,14 @@
     "postbundle": "fix-sourcemaps -s dist/domtastic.js.map -f domtastic.js",
     "watch": "onchange 'src/*.js' -- npm run bundle",
     "transpile": "6to5 src -d dist/commonjs -c && 6to5 src -d dist/amd --modules amd -c",
-    "posttranspile": "sed -i s/__VERSION__/$npm_package_version/ dist/**/index.js",
+    "prebuild": "echo '' >> dist/domtastic.min.js",
     "build": "npm run bundle && cd dist && uglifyjs --in-source-map domtastic.js.map --source-map domtastic.min.js.map --source-map-include-sources --screw-ie8 -mco domtastic.min.js",
-    "postbuild": "echo '' >> dist/domtastic.min.js",
     "build-release": "npm run build && npm run transpile"
   },
   "browserify": {
     "transform": [
       [
-        "6to5-browserify",
+        "6to5ify",
         {
           "comments": false
         }

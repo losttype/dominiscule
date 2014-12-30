@@ -35,8 +35,8 @@ if (typeof selector !== 'undefined') {
   api.closest = selector.closest;
 }
 
-extend($, contains, noconflict, type);
-extend(api, array, attr, class_, css, data, dom, dom_extra, event, html, ready, selector_extra, trigger);
+extend($);
+extend(api, array, attr, class_, css, dom, dom_extra, event);
 
 $.fn = api;
 
