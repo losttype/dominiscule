@@ -13,8 +13,8 @@ Refer to the [DOMtastic documentation](http://webpro.github.io/DOMtastic/doc/). 
 - [DOM](http://webpro.github.io/DOMtastic/doc#dom)
 - [DOM (extra)](http://webpro.github.io/DOMtastic/doc#dom_extra)
 - [Event](http://webpro.github.io/DOMtastic/doc#event)
+- [HTML](http://webpro.github.io/DOMtastic/doc#html)
 - [Selector](http://webpro.github.io/DOMtastic/doc#selector)
-- [Selector (extra)](http://webpro.github.io/DOMtastic/doc#selector_extra)
 
 ## License
 

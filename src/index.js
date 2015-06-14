@@ -20,11 +20,11 @@ import * as css from 'domtastic/commonjs/css';
 import * as dom from 'domtastic/commonjs/dom';
 import * as dom_extra from 'domtastic/commonjs/dom_extra';
 import * as event from 'domtastic/commonjs/event';
-// import * as html from 'domtastic/commonjs/html';
+import * as html from 'domtastic/commonjs/html';
 // import * as noconflict from 'domtastic/commonjs/noconflict';
 // import * as ready from 'domtastic/commonjs/ready';
 import * as selector from 'domtastic/commonjs/selector';
-// import * as selector_extra from 'domtastic/commonjs/selector_extra';
+import * as selector_extra from 'domtastic/commonjs/selector_extra';
 // import * as trigger from 'domtastic/commonjs/trigger';
 // import * as type from 'domtastic/commonjs/type';
 
@@ -36,7 +36,8 @@ if (typeof selector !== 'undefined') {
 }
 
 extend($);
-extend(api, array, attr, class_, css, dom, dom_extra, event);
+extend(api, array, attr, class_, css, dom, dom_extra, event, html, selector_extra);
+// extend(api,`` array, attr, class_, closest, css, data, dom, dom_extra, event, html, ready, selector_extra, trigger);
 
 $.fn = api;
 
